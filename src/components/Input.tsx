@@ -11,7 +11,7 @@ const Input: React.FC<InputProps> = ({todo, setTodo, handleAdd}) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const handleSubmit = (e:React.FormEvent) => {
     handleAdd(e);
-    inputRef.current?.blur()    
+    inputRef.current?.blur()
   }
 
   return (

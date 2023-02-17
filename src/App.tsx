@@ -3,7 +3,7 @@ import Input from "./components/Input"
 import ListTodo from "./components/ListTodo"
 
 export interface Todo {
-  id: number
+  id: string;
   todo: string
   isDone: boolean
 }
@@ -22,7 +22,7 @@ function App() {
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
     if (todo) {
-      setTodos([...todos, {id: Date.now(), todo, isDone:false}])
+      setTodos([...todos, {id: Date.now().toString(), todo, isDone:false}])
       setTodo('')
     }
   }
